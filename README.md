@@ -9,7 +9,7 @@ _.github/workflows/lint.yml_
 on: [push, pull_request]
 name: Main
 jobs:
-  php-cs-fixer:
+  tlint:
     name: TLINT
     runs-on: ubuntu-latest
     steps:
