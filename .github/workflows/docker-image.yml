@@ -1,0 +1,23 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Docker Build & Push Action
+      uses: mr-smithers-excellent/docker-build-push@v5.6
+      with:
+        image: fwartner/ga-tlint
+        username: fwartner
+        password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+        addLatest: true
+        addTimestamp: true
