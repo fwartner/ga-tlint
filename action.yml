@@ -1,0 +1,15 @@
+# https://help.github.com/en/articles/metadata-syntax-for-github-actions
+
+author: 'fwartner'
+
+branding:
+    icon: 'check'
+    color: 'blue'
+
+description: 'Use tlint via Github Actions.'
+
+name: 'GA-TLINT'
+
+runs:
+    using: 'docker'
+    image: 'docker://fwartner/ga-tlint:latest'

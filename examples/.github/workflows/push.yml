@@ -1,0 +1,12 @@
+on: [push, pull_request]
+name: Lint
+jobs:
+  tlint:
+    name: TLINT
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: TLINT
+      uses: docker://fwartner/ga-tlint
+      with:
+        args: --diff --dry-run
