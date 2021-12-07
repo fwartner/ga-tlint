@@ -17,6 +17,7 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v5.6
       with:
         image: fwartner/ga-tlint
+        registry: registry.hub.docker.com
         username: fwartner
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
         addLatest: true
